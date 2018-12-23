@@ -21,4 +21,8 @@ class InteractiveRecord
 
     table_headers.compact
   end
+
+  def initialize(attributes)
+
+  end
 end
