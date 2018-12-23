@@ -8,9 +8,17 @@ class InteractiveRecord
   end
 
   def self.column_names
-    sql = <<-SQL
-      PRAGMA table_info();
-    SQL
+    DB[:conn].results_as_hash = true
+
+    sql = "PRAGMA table_info('#{table_name}');"
+
+    raw_table_headers = DB[:conn].execute(sql)
+    table_headers = Array.new
+
+    raw_table_headers.each do |column|
+      table_headers << column["name"]
+    end
+
     binding.pry
   end
 end
