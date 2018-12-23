@@ -4,6 +4,6 @@ require 'pry'
 
 class InteractiveRecord
   def self.table_name
-    binding.ory
+    binding.pry
   end
 end
