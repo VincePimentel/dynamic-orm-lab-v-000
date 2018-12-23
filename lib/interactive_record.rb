@@ -34,6 +34,6 @@ class InteractiveRecord
 
   def col_names_for_insert
     col_names = elf.class.column_names.delete_if { |column| column == "id" }
-    col_names
+    binding.pry
   end
 end
