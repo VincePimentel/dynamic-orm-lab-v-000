@@ -77,7 +77,7 @@ class InteractiveRecord
       WHERE ? = ?;
     SQL
 
-    DB[:conn].execute(sql, key, value)
+    DB[:conn].execute(sql, key, "'#{value}'")
     binding.pry
   end
 end
