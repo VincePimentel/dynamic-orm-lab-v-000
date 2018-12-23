@@ -68,7 +68,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute_hash)
-    key = attribute_hash.keys[0].to_s
+    key = attribute_hash.keys[0]
     value = attribute_hash.values[0]
 
     sql = <<-SQL
