@@ -73,8 +73,8 @@ class InteractiveRecord
       FROM #{self.table_name}
       WHERE #{col_names_for_insert} = ?;
     SQL
-
-    DB[:conn].execute(sql, attribute)
     binding.pry
+    DB[:conn].execute(sql, attribute)
+    
   end
 end
