@@ -69,7 +69,8 @@ class InteractiveRecord
 
   def self.find_by(hash)
     key = hash.keys[0]
-    value = hash.values[0]
+    value_0 = hash.values[0]
+    value = value_0.is_a?(Integer) ? value_0 : "'#{value_0}'"
 
     sql = <<-SQL
       SELECT *
