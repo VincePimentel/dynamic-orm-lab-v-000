@@ -71,10 +71,10 @@ class InteractiveRecord
     sql = <<-SQL
       SELECT *
       FROM #{self.table_name}
-      WHERE #{col_names_for_insert} = ?;
+      WHERE #{self.col_names_for_insert} = ?;
     SQL
     binding.pry
     DB[:conn].execute(sql, attribute)
-    
+
   end
 end
