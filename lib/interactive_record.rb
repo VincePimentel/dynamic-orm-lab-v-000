@@ -33,7 +33,7 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    column_names = elf.class.column_names.delete_if { |column| column == "id" }
-    column_names
+    col_names = elf.class.column_names.delete_if { |column| column == "id" }
+    col_names
   end
 end
