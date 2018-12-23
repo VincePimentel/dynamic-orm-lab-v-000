@@ -8,6 +8,9 @@ class InteractiveRecord
   end
 
   def self.column_names
-    
+    sql = <<-SQL
+      PRAGMA table_info();
+    SQL
+    binding.pry
   end
 end
