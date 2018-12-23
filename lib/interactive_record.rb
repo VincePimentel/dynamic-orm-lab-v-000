@@ -22,7 +22,7 @@ class InteractiveRecord
     table_headers.compact
   end
 
-  def initialize(attributes = {})
+  def initialize(attributes)
     attributes.each do |attribute, value|
       self.send("#{attribute}=", value)
     end
