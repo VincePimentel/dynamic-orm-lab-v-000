@@ -19,6 +19,6 @@ class InteractiveRecord
       table_headers << column["name"]
     end
 
-    binding.pry
+    table_headers.compact
   end
 end
