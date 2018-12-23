@@ -71,7 +71,7 @@ class InteractiveRecord
     sql = <<-SQL
       SELECT *
       FROM #{self.table_name}
-      WHERE #{self.column_names} = ?;
+      WHERE #{col_names_for_insert} = ?;
     SQL
 
     DB[:conn].execute(sql, attribute)
