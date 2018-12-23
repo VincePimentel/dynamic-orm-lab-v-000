@@ -47,7 +47,11 @@ class InteractiveRecord
   end
 
   def save
+    sql = <<-SQL
+      INSERT INTO #{}
+    SQL
 
 
+    binding.pry
   end
 end
