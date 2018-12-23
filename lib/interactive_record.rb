@@ -75,6 +75,6 @@ class InteractiveRecord
     SQL
 
     DB[:conn].execute(sql, attribute)
-    binding.pru
+    binding.pry
   end
 end
